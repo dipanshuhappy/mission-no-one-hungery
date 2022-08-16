@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "593605784768",
+    "project_id": "hunger-hunt-1",
+    "storage_bucket": "hunger-hunt-1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:593605784768:android:bb3ef01e92a367602be925",
+        "android_client_info": {
+          "package_name": "com.bookies.full_bull.full_belly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "593605784768-v88k4dnoh4dkletghj2fn35hr7ar6ba1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnhbI29cO2PBn7pYD1feyqn20EukY-rL4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "593605784768-v88k4dnoh4dkletghj2fn35hr7ar6ba1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
