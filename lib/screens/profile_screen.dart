@@ -21,10 +21,7 @@ class ProfileScreen extends StatelessWidget {
                   style: TextStyle(fontSize: 25, color: Colors.white),
                 )),
             Row(
-              children: [
-                Text("name:"),
-                Icon(Icons.edit)
-              ],
+              children: [Text("name:"), Icon(Icons.edit)],
             )
           ],
         ),

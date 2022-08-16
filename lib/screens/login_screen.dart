@@ -12,35 +12,46 @@ import 'package:full_belly/widgets/social_icons_buttons.dart';
 import 'package:provider/provider.dart';
 
 import '../auth_service.dart';
+
 class LoginTextField extends StatelessWidget {
   const LoginTextField({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    void gotoHomeScreen()=>Navigator.push(context, MaterialPageRoute(builder: (context) => (const HomeScreen())));
+    void gotoHomeScreen() => Navigator.push(
+        context, MaterialPageRoute(builder: (context) => (const HomeScreen())));
     final loginValidatorService = Provider.of<LoginValidation>(context);
     final authService = Provider.of<AuthService>(context);
-    onLoginPress()  async {
-      if(loginValidatorService.validate){
-        try{
-          final user = await  authService.signInWithEmailAndPassword(loginValidatorService.email.value!,loginValidatorService.password.value!);
+    onLoginPress() async {
+      if (loginValidatorService.validate) {
+        try {
+          final user = await authService.signInWithEmailAndPassword(
+              loginValidatorService.email.value!,
+              loginValidatorService.password.value!);
           print(user);
           gotoHomeScreen();
-        }
-        catch (e){
+        } catch (e) {
           print(e);
         }
       }
     }
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        LabelTextField(label: "Email",errorText:loginValidatorService.email.error,onChanged: loginValidatorService.validateEmail,),
-        LabelTextField(label: "Password",errorText:loginValidatorService.password.error,onChanged: loginValidatorService.validatePassword),
+        LabelTextField(
+          label: "Email",
+          errorText: loginValidatorService.email.error,
+          onChanged: loginValidatorService.validateEmail,
+        ),
+        LabelTextField(
+            label: "Password",
+            errorText: loginValidatorService.password.error,
+            onChanged: loginValidatorService.validatePassword),
         const SocialIconButtons(),
         SizedBox(
           width: double.infinity,
           child: OutlinedButton(
-            onPressed: loginValidatorService.validate? onLoginPress:null,
+            onPressed: loginValidatorService.validate ? onLoginPress : null,
             child: Text(
               "Enter ",
               style: TextStyle(fontSize: 16),

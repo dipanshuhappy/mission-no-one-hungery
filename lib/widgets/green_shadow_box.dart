@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:full_belly/utils/colors.dart';
+
 class GreenShadowBox extends StatelessWidget {
-  GreenShadowBox({Key? key,required this.child}) : super(key: key);
+  GreenShadowBox({Key? key, required this.child}) : super(key: key);
   Widget child;
   @override
   Widget build(BuildContext context) {
@@ -9,9 +10,7 @@ class GreenShadowBox extends StatelessWidget {
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.secondary,
         borderRadius: BorderRadius.circular(2),
-        boxShadow: [
-          greenShadow
-        ],
+        boxShadow: [greenShadow],
       ),
       height: MediaQuery.of(context).size.height * 0.4,
       width: MediaQuery.of(context).size.width,
@@ -20,4 +19,3 @@ class GreenShadowBox extends StatelessWidget {
     );
   }
 }
-

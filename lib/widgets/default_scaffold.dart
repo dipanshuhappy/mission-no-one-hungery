@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
+
 class DefaultScaffold extends StatelessWidget {
-  const DefaultScaffold({
-    Key? key,
-    required this.body
-  }) : super(key: key);
+  const DefaultScaffold({Key? key, required this.body}) : super(key: key);
 
   final Widget body;
   @override

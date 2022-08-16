@@ -11,45 +11,44 @@ class SignUpTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children:  [
+    return Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
       const LabelTextField(label: "Email"),
       const LabelTextField(label: "Password"),
       const LabelTextField(label: "Retype Password"),
-      Text("Or Sign Up using ...",style: TextStyle(color: Theme.of(context).primaryColor,fontSize: 16)),
+      Text("Or Sign Up using ...",
+          style:
+              TextStyle(color: Theme.of(context).primaryColor, fontSize: 16)),
       const SocialIconButtons(),
       SizedBox(
         width: double.infinity,
-        child:OutlinedButton(
-          onPressed: ()=>onSignUpPress(),
+        child: OutlinedButton(
+          onPressed: () => onSignUpPress(),
           child: const Text(
-              "Create Account",
-            style: TextStyle(
-              fontSize: 16
-            ),
+            "Create Account",
+            style: TextStyle(fontSize: 16),
           ),
-        ) ,
+        ),
       )
     ]);
   }
+
   onSignUpPress() {}
 }
+
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    void _onLoginClick() => {
-    Navigator.pop(context)
-  };
-    return
-      DefaultScaffold(body: Container(
-        decoration: BoxDecoration(gradient: backgroundGradient),
-        child: Center(
-            child:
-            SingleChildScrollView(
-            child:
-                Column(mainAxisAlignment: MainAxisAlignment.center,
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
+    void _onLoginClick() => {Navigator.pop(context)};
+    return DefaultScaffold(
+        body: Container(
+            decoration: BoxDecoration(gradient: backgroundGradient),
+            child: Center(
+                child: SingleChildScrollView(
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
                   Padding(
                     padding: const EdgeInsets.only(left: 16, bottom: 16),
                     child: LoginOrSignUpButton(
@@ -57,11 +56,11 @@ class SignUpScreen extends StatelessWidget {
                       onLogin: _onLoginClick,
                     ),
                   ),
-          GreenShadowBox(
-              child: const Padding(
-                  padding: EdgeInsets.only(left: 8, right: 8),
-                  child: SignUpTextField()))
-        ])))));
+                  GreenShadowBox(
+                      child: const Padding(
+                          padding: EdgeInsets.only(left: 8, right: 8),
+                          child: SignUpTextField()))
+                ])))));
   }
 
   onSignUpPress() {}

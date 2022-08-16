@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+
 class LabelTextField extends StatelessWidget {
   const LabelTextField(
       {Key? key,
-        required this.label,
-        this.validator,
+      required this.label,
+      this.validator,
       this.errorText,
-      this.onChanged}) : super(key: key);
+      this.onChanged})
+      : super(key: key);
   final String label;
   final String? Function(String?)? validator;
   final String? errorText;
@@ -13,11 +15,8 @@ class LabelTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-        decoration:InputDecoration(
-            labelText:label,
-          errorText: errorText
-        ),
-        validator: validator,
+      decoration: InputDecoration(labelText: label, errorText: errorText),
+      validator: validator,
       onChanged: onChanged,
     );
   }

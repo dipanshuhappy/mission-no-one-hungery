@@ -10,11 +10,13 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    void _gotoProfileScreen(){
+    void _gotoProfileScreen() {
       print("slkdfjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj");
       Navigator.push(context,
           MaterialPageRoute(builder: (context) => (const ProfileScreen())));
-    };
+    }
+
+    ;
     TextStyle textStyle = TextStyle(
         fontSize: 25,
         fontWeight: FontWeight.w300,

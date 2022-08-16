@@ -23,30 +23,25 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  ThemeData _getTheme() =>
-      ThemeData(
-          textTheme: textTheme,
-          primaryColor: primaryColor,
-          colorScheme: colorScheme,
-          inputDecorationTheme: inputDecorationTheme,
-          appBarTheme: appBarTheme,
-          outlinedButtonTheme: outlinedButtonTheme
-      );
+  ThemeData _getTheme() => ThemeData(
+      textTheme: textTheme,
+      primaryColor: primaryColor,
+      colorScheme: colorScheme,
+      inputDecorationTheme: inputDecorationTheme,
+      appBarTheme: appBarTheme,
+      outlinedButtonTheme: outlinedButtonTheme);
 
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(providers: [
-        Provider(create: (_)=>AuthService()),
-      ChangeNotifierProvider(create: (_)=>LoginValidation()),
-
-    ],
+    return MultiProvider(
+      providers: [
+        Provider(create: (_) => AuthService()),
+        ChangeNotifierProvider(create: (_) => LoginValidation()),
+      ],
       child: MaterialApp(
           theme: _getTheme(),
           title: "Hunger Hunter",
-          home: const LoginScreen()
-      )
-      ,);
+          home: const LoginScreen()),
+    );
   }
 }
-
-

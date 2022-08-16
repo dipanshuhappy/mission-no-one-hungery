@@ -50,21 +50,23 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static  FirebaseOptions android = FirebaseOptions(
-    apiKey: dotenv.env['API_KEY_ANDROID']??"No Api key found",
-    appId: dotenv.env['APP_ID_ANDROID']??"No App Id Found",
-    messagingSenderId: dotenv.env['MESSAGING_SENDER_ID']??"No Messaging Sender id Found",
-    projectId: dotenv.env['PROJECT_ID']??"No Project Id Found",
-    storageBucket: dotenv.env['STORAGE_BUCKET']??"No Storage Id Found",
+  static FirebaseOptions android = FirebaseOptions(
+    apiKey: dotenv.env['API_KEY_ANDROID'] ?? "No Api key found",
+    appId: dotenv.env['APP_ID_ANDROID'] ?? "No App Id Found",
+    messagingSenderId:
+        dotenv.env['MESSAGING_SENDER_ID'] ?? "No Messaging Sender id Found",
+    projectId: dotenv.env['PROJECT_ID'] ?? "No Project Id Found",
+    storageBucket: dotenv.env['STORAGE_BUCKET'] ?? "No Storage Id Found",
   );
 
-  static  FirebaseOptions ios = FirebaseOptions(
-    apiKey: dotenv.env['API_KEY_ANDROID']??"No Api key found",
-    appId: dotenv.env['APP_ID_ANDROID']??"No App Id Found",
-    messagingSenderId: dotenv.env['MESSAGING_SENDER_ID']??"No Messaging Sender id Found",
-    projectId: dotenv.env['PROJECT_ID']??"No Project Id Found",
-    storageBucket: dotenv.env['STORAGE_BUCKET']??"No Storage Id Found",
-    iosClientId: dotenv.env['IOS_CLIENT_ID']??"No IOS Client ID",
-    iosBundleId: dotenv.env['IOS_BUNDLED']??"No IOS bundled found",
+  static FirebaseOptions ios = FirebaseOptions(
+    apiKey: dotenv.env['API_KEY_ANDROID'] ?? "No Api key found",
+    appId: dotenv.env['APP_ID_ANDROID'] ?? "No App Id Found",
+    messagingSenderId:
+        dotenv.env['MESSAGING_SENDER_ID'] ?? "No Messaging Sender id Found",
+    projectId: dotenv.env['PROJECT_ID'] ?? "No Project Id Found",
+    storageBucket: dotenv.env['STORAGE_BUCKET'] ?? "No Storage Id Found",
+    iosClientId: dotenv.env['IOS_CLIENT_ID'] ?? "No IOS Client ID",
+    iosBundleId: dotenv.env['IOS_BUNDLED'] ?? "No IOS bundled found",
   );
 }
