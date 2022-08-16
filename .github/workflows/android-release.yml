@@ -36,7 +36,7 @@ jobs:
       - run: flutter build apk
       - uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{github.sha}}
+          tag_name: tag
           files: build/app/outputs/apk/release/app-release.apk
 #      - uses: actions/upload-artifact@v1
 #        with:
